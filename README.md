@@ -7,7 +7,7 @@ This program is a Grade Point Average (GPA) calculator, which works for any numb
 In the terminal enter:
 ```
 cd desktop
-git clone 
+git clone https://github.com/Harjot66/gpa_calculator.git
 python3 gpa_calculator
 ```
 
