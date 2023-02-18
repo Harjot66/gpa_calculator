@@ -41,7 +41,7 @@ def the_calculator(num_courses, gpa_scheme):
                 
                 print("\nError, please enter a valid number")
                 
-                ordinal_funct()
+                ordinal_funct(num_courses)
             
     ordinal_funct(num_courses)
         
