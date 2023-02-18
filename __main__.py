@@ -2,36 +2,48 @@
 
 def the_calculator(num_courses, gpa_scheme):
     
-    gpa_sum = 0
-    
-    course_num = 1
-    
-    ordinal = ""
-    
 #this loop iterates over each course and requests the GPA of each course from the user as well as determines 
 #which ordinal to use in the input statements asked to the user
+
+    def ordinal_funct(num_courses):
     
-    for i in range(1, int(num_courses) + 1):
-        
-        if str(course_num)[-1] == '1':
+        global gpa_sum
+    
+        global course_num
+    
+        global ordinal
+    
+        for i in range(1, int(num_courses) + 1):
             
-            ordinal = "st"
+            if str(course_num)[-1] == '1':
+                
+                ordinal = "st"
+                
+            elif str(course_num)[-1] == '2':
+                
+                ordinal = "nd"
+                
+            elif str(course_num)[-1] == '3':
+                
+                ordinal = "rd"
+                
+            else:
+                
+                ordinal = "th"
+                
+            try:
+                
+                gpa_sum += float(input("\nPlease input the GPA for your " + str(course_num) + str(ordinal) + " course: "))
             
-        elif str(course_num)[-1] == '2':
+                course_num += 1
+                
+            except ValueError:
+                
+                print("\nError, please enter a valid number")
+                
+                ordinal_funct()
             
-            ordinal = "nd"
-            
-        elif str(course_num)[-1] == '3':
-            
-            ordinal = "rd"
-            
-        else:
-            
-            ordinal = "th"
-            
-        gpa_sum += float(input("\nPlease input the GPA for your " + str(course_num) + str(ordinal) + " course: "))
-        
-        course_num += 1
+    ordinal_funct(num_courses)
         
 #this code prints the gpa result to the user
         
@@ -54,6 +66,12 @@ Procedure:
 """)
 
 print("This GPA calculator has been programmed by https://github.com/Harjot66\n")
+
+gpa_sum = 0
+
+course_num = 1
+
+ordinal = ""
 
 def check_if_number_1(val_to_check_1):
 
