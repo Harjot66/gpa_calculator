@@ -55,8 +55,36 @@ Procedure:
 
 print("This GPA calculator has been programmed by https://github.com/Harjot66\n")
 
-user_num_courses = int(input("\nHow many courses are you calculating for? "))
+def check_if_number_1(val_to_check_1):
 
-user_gpa_scheme = float(input("\nWhat is your GPA grading scheme out of? "))
+    try:
+        
+        global user_num_courses
+        
+        user_num_courses = float(val_to_check_1)
+        
+    except ValueError:
+        
+        print("\nError, please enter a valid number")
+        
+        check_if_number_1(input("\nHow many courses are you calculating for? "))
+        
+check_if_number_1(input("\nHow many courses are you calculating for? "))
+
+def check_if_number_2(val_to_check_2):
+
+    try:
+        
+        global user_gpa_scheme
+        
+        user_gpa_scheme = float(val_to_check_2)
+        
+    except ValueError:
+        
+        print("\nError, please enter a valid number")
+        
+        check_if_number_2(input("\nWhat is your GPA grading scheme out of? "))
+
+check_if_number_2(input("\nWhat is your GPA grading scheme out of? "))
 
 the_calculator(user_num_courses, user_gpa_scheme)
