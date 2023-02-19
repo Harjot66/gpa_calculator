@@ -2,9 +2,13 @@
 
 def the_calculator(num_courses, gpa_scheme):
     
+    global gpa_sum
+    
     gpa_sum = 0
 
     course_num = 1
+    
+    global ordinal
 
     ordinal = ""
     
@@ -13,23 +17,41 @@ def the_calculator(num_courses, gpa_scheme):
     
     for i in range(1, int(num_courses) + 1):
         
-        if str(course_num)[-1] == '1':
+        def ordinate_funct():
+        
+            if str(course_num)[-1] == '1':
+                
+                ordinal = "st"
+                
+            elif str(course_num)[-1] == '2':
+                
+                ordinal = "nd"
+                
+            elif str(course_num)[-1] == '3':
+                
+                ordinal = "rd"
+                
+            else:
+                
+                ordinal = "th"
+                
+            try:
+                
+                global gpa_sum_temp
+                
+                gpa_sum_temp = 0
             
-            ordinal = "st"
+                gpa_sum_temp += float(input("\nPlease input the GPA for your " + str(course_num) + str(ordinal) + " course: "))
             
-        elif str(course_num)[-1] == '2':
-            
-            ordinal = "nd"
-            
-        elif str(course_num)[-1] == '3':
-            
-            ordinal = "rd"
-            
-        else:
-            
-            ordinal = "th"
-            
-        gpa_sum += float(input("\nPlease input the GPA for your " + str(course_num) + str(ordinal) + " course: "))
+            except ValueError:
+                
+                print("Error, please enter a valid number")
+                
+                ordinate_funct()
+                
+        ordinate_funct()
+        
+        gpa_sum += gpa_sum_temp
         
         course_num += 1
         
