@@ -1,4 +1,4 @@
-# gpa_calculator
+# GPA Calculator
 
 This program is a Grade Point Average (GPA) calculator, which works for any number of courses and GPA grading scheme.
 
