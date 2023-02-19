@@ -45,7 +45,7 @@ def the_calculator(num_courses, gpa_scheme):
             
             except ValueError:
                 
-                print("Error, please enter a valid number")
+                print("\nError, please enter a valid number")
                 
                 ordinate_funct()
                 
@@ -57,7 +57,7 @@ def the_calculator(num_courses, gpa_scheme):
         
 #this code prints the gpa result to the user
         
-    average_gpa = gpa_sum/(num_courses)
+    average_gpa = gpa_sum/num_courses
         
     input("\nPress enter to see your GPA")
         
