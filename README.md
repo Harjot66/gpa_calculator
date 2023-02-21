@@ -4,7 +4,7 @@ This program is a Grade Point Average (GPA) calculator, which works for any numb
 
 # How to open
 
-Prior to running program you must have unix terminal, git and python installed
+Prior to running program you must have unix terminal, git and python installed.
 
 In the terminal enter:
 ```
@@ -15,6 +15,6 @@ python3 gpa_calculator
 
 # How to use
 
-1. Enter the number of courses you would like to calculate the GPA for
-2. Enter the GPA for each course line-by-line as the prompts ask you to
-3. Get the result
+1. Enter the number of courses you would like to calculate the GPA for.
+2. Enter the GPA for each course line-by-line as the prompts ask you to.
+3. Get the result.
