@@ -4,7 +4,7 @@ This program is a Grade Point Average (GPA) calculator, which works for any numb
 
 # How to open
 
-Prior to running program you must have git and python installed
+Prior to running program you must have unix terminal, git and python installed
 
 In the terminal enter:
 ```
